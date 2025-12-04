@@ -12,24 +12,15 @@ The framework performs automated searches on **DuckDuckGo**, validates results, 
 
 ## 📁 Project Structure
 
-├── pages/
-
-│   ├── search.py                  # DuckDuckGoSearchPage object
-
-│   ├── result.py                  # DuckDuckGoResultPage object
-
-│
-
-├── tests/
-
-│   └── test_search.py             # Parametrized DuckDuckGo search tests
-
-│
-
-├── conftest.py                    # Shared fixtures (Playwright page, POM)
-
-├── requirements.txt
-
+├── pages/\
+│   ├── search.py                  # DuckDuckGoSearchPage object\
+│   ├── result.py                  # DuckDuckGoResultPage object\
+│\
+├── tests/\
+│   └── test_search.py             # Parametrized DuckDuckGo search tests\
+│\
+├── conftest.py                    # Shared fixtures (Playwright page, POM)\
+├── requirements.txt\
 └── README.md
 
 ## 🧪 Test Scenario
@@ -49,36 +40,28 @@ Searches run against a set of animals using pytest.mark.parametrize.
 ## 🛠 Installation
 **1. Create virtual environment**
 
-python -m venv .venv
-
-source .venv/bin/activate   # macOS / Linux
-
+python -m venv .venv\
+source .venv/bin/activate   # macOS / Linux\
 .venv\Scripts\activate      # Windows
 
-**2. Install dependencies**
+**2. Install dependencies**\
+`pip install -r requirements.txt`
 
-pip install -r requirements.txt
-
-**3. Install Playwright browsers**
-
-playwright install
+**3. Install Playwright browsers**\
+`playwright install`
 
 ## ▶️ Running the Tests
-**Run all tests**
+**Run all tests**\
+`pytest`
 
-pytest
+**Run with Playwright’s HTML report**\
+`pytest --headed`
 
-**Run with Playwright’s HTML report**
+**Run a single test**\
+`pytest tests/test_search.py::test_basic_duckduckgo_search`
 
-pytest --headed
-
-**Run a single test**
-
-pytest tests/test_search.py::test_basic_duckduckgo_search
-
-**Run with screenshots and tracing**
-
-pytest --tracing on --screenshot on
+**Run with screenshots and tracing**\
+`pytest --tracing on --screenshot on`
 
 ## ⚙️ Technologies Used
 | Technology     | Purpose                        |
@@ -90,6 +73,7 @@ pytest --tracing on --screenshot on
 
    
 ## 🤝 Contributing
-Pull requests and suggestions are welcome!
+Pull requests and suggestions are welcome!\
 Feel free to open issues for improvements, bugs, or feature requests.
+
 
